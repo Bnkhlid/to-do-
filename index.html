@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#062e3f" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="CSS/main.css" />
+    <title>Memo & Dodo Planner</title>
+  </head>
+  <body class="standard">
+    <!-- Header -->
+    <div id="header">
+      <div class="flexrow-container">
+        <div class="theme-selector standard-theme"></div>
+        <div class="theme-selector light-theme"></div>
+        <div class="theme-selector darker-theme"></div>
+      </div>
+      <h1 id="title">Just do it</h1>
+    </div>
+
+    <!-- Task Form -->
+    <div id="form">
+      <form id="todo-form">
+        <select id="person-select">
+          <option value="memo">Memo</option>
+          <option value="dodo">Dodo</option>
+        </select>
+        <input
+          id="todo-input"
+          class="standard-input"
+          type="text"
+          placeholder="Add a study task"
+          autocomplete="off"
+        />
+        <button id="add-task" class="standard-button" type="submit">
+          Add Task
+        </button>
+      </form>
+    </div>
+
+    
+    <div id="progress-container" style="text-align: center">
+      <div id="progress-bar-fill"></div>
+    </div>
+    <div
+      id="progress-text"
+      style="text-align: center; font-size: 1rem; margin-bottom: 10px"
+    >
+      0% complete • 0 / 0
+    </div>
+
+    
+    <div id="myUnOrdList">
+      <ul class="todo-list" id="todo-list"></ul>
+    </div>
+
+    
+    <section id="reminders-section">
+      <div class="section-title">Reminders 💌</div>
+      <form class="reminder-form" id="reminder-form">
+        <input
+          type="text"
+          id="reminder-text"
+          placeholder="What to remind Dodo ?"
+          class="standard-input"
+        />
+        <input
+          type="datetime-local"
+          id="reminder-time"
+          class="standard-input"
+        />
+        <button id="save-reminder" class="standard-button" type="button">
+          Add Reminder
+        </button>
+      </form>
+      <ul class="reminder-list" id="reminder-list"></ul>
+    </section>
+
+    <!-- Celebration / Alarm Sound -->
+    <audio id="celebration-sound" src="assets/alert.mp3" preload="auto"></audio>
+
+    <script src="JS/main.js"></script>
+    <script src="JS/time.js"></script>
+  </body>
+</html>
